@@ -1,0 +1,65 @@
+Frailty 
+Problem 
+
+1. Identifying the Wellness Challenge
+
+Background and Significance
+Frailty, a growing but often under-detected public health issue, is recognised in clinical practice due to its impact on outcomes such as falls, disability, hospitalisation, and mortality. However with Hong Kong’s rapid ageing population, the proportion of elderly persons aged 65 and over is projected to increase from 20.5% in 2021 to 36.0% in 2046 (Census and Statistic Department, 2023), increasing healthcare burden.
+
+Clinical and Health System Impact
+Early detection enables risk stratification and guides treatment decisions. As frailty is dynamic and potentially reversible, targeted interventions can reduce or slow its progression. Recognising frailty supports patient-centred care and helps optimise health care planning and resource allocation.
+Current frailty screening tools (e.g., Clinical Frailty Scale, Fried criteria) are underused in busy primary care and community settings due to time constraints, stigma, and lack of continuous monitoring. Most cases are identified after complications have occurred, missing the critical window for early intervention.
+
+
+FrailtyLens is a mobile and wearable-integrated AI application designed for early detection of frailty and to slow disease progression through continuous monitoring and personalised intervention.
+ 
+
+Key Features
+Biosocial framework : bio , social , psycho
+ 1. Biological Domain (Physical Health)
+Frailty Scoring & Monitoring
+Passive data collection using wearable sensors (e.g., Apple Watch) to track gait speed, activity level, tremor, and heart rate variability, which are key early indicators of physical frailty.
+Active screening through digital frailty assessments (e.g., Clinical Frailty Scale, FRAIL questionnaire, timed-up-and-go test via phone camera). Integration with Clinical Frailty Scale (CFS). CFS serves as both a ground truth label for AI training and a clinician-facing indicator for triage and follow-up.
+AI algorithms generate frailty risk scores and detect early changes, supporting early diagnosis and personalised intervention. It provides exercise recommendations (resistance training), nutritional advice, and progress tracking to help users reverse or slow frailty progression.
+Health Parameter Integration
+Optional linkage with Electronic Health Record (eHRSS) for relevant comorbidities (e.g., diabetes, cardiovascular disease), allowing the model to adjust risk prediction accordingly.
+
+
+Psychological domain 
+The psychological component of frailty is often overlooked, even though mental health changes and cognitive decline frequently precede or accelerate physical frailty. To address this, our app integrates a multilingual text- and voice-based chatbot that acts as a daily cognitive and emotional check-in companion for older adults.
+This chatbot serves two main functions:
+Early detection of cognitive and neurodegenerative changes (e.g., dementia, mild cognitive impairment).
+Psychological support through regular mood monitoring, guided conversations, and early triage for mental health issues such as depression or anxiety.
+
+1. Early Dementia and Neurodegenerative Detection
+The chatbot engages users in short, natural conversations daily or several times a week, using both text and voice. The interaction is analysed using natural language processing (NLP) and speech analytics to detect early cognitive changes, such as:
+Language markers: increased word-finding difficulty, shorter sentences, reduced vocabulary, semantic errors.
+Speech features: slower speech, longer pauses, changes in pitch or fluency (often seen in early neurodegenerative diseases).
+Memory prompts: the chatbot may ask the user to recall simple details from previous conversations or perform brief cognitive exercises (e.g., naming animals, recounting daily activities, orientation questions).
+Inconsistencies over time: the AI tracks gradual decline across weeks or months, which may indicate early dementia or MCI before formal diagnosis.
+These changes are flagged to clinicians or caregivers through the app’s dashboard, enabling earlier referral for cognitive assessment, such as MoCA or neuroimaging, when appropriate.
+
+2.  Psychological Support and Mental Health Screening
+Beyond cognition, the chatbot functions as a low-barrier mental health interface for older adults:
+Daily mood check-ins using short structured or open-ended questions (e.g., “How are you feeling today?”), analysed for emotional tone, to detect early cognitive or emotional decline, which often overlaps with frailty progression
+Validated screening integration: PHQ-9 (depression) and GAD-7 (anxiety) questionnaires can be administered conversationally, increasing comfort and reducing stigma.
+Crisis detection: if the chatbot detects signs of significant distress (e.g., hopeless language, agitation), it can trigger alerts to caregivers or connect users to mental health helplines.
+Cultural & linguistic adaptation: text and voice options in Cantonese, Mandarin, and English make it accessible to Hong Kong’s elderly population.
+Screening for Undiagnosed Mental Illnesses
+In-app brief mental health screening tools (e.g., PHQ-9 for depression, GAD-7 for anxiety) administered periodically.
+AI models identify patterns of reduced activity, sleep disturbances, or behavioural changes that may indicate undiagnosed or worsening mental health conditions.
+Users flagged at risk are prompted for follow-up with primary care or mental health services.
+
+Social domain (Environment & Support)
+Social Connectivity Mapping
+Tracks social engagement levels through activity check-ins, community event participation, and interaction frequency within the app.
+Identifies social isolation, a key driver of frailty progression.
+Caregiver & Community Integration
+Caregivers and NGOs can access a secure dashboard to monitor user progress, receive alerts, and coordinate community-based interventions (e.g., exercise programmes, fall-prevention classes).
+Encourages social prescribing — linking users to community support resource
+
+
+
+Reference 
+https://www.censtatd.gov.hk/en/EIndexbySubject.html?scode=190&pcode=FA100061
+Fried LP, Tangen CM, Walston J, et al. Frailty in older adults: evidence for a phenotype. J Gerontol A Biol Sci Med Sci 2001;56:M146-56.
