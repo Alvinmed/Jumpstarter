@@ -491,6 +491,12 @@ a {
   gap: 18px;
 }
 
+.solution-left {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
 .solution-item {
   text-align: left;
   border: none;

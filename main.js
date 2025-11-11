@@ -116,6 +116,8 @@ document.querySelectorAll(".solution-layout").forEach((layout) => {
   const items = layout.querySelectorAll(".solution-item");
   const pillars = layout.querySelectorAll(".pillar");
   const images = layout.querySelectorAll(".solution-image");
+  const featureCards = layout.querySelectorAll(".feature-card");
+  const wordBox = layout.querySelector(".word-box[data-key]");
 
   const activate = (key) => {
     items.forEach((item) => {
@@ -128,8 +130,17 @@ document.querySelectorAll(".solution-layout").forEach((layout) => {
       pillar.classList.toggle("is-active", pillar.dataset.pillar === key);
     });
 
+    featureCards.forEach((card) => {
+      card.classList.toggle("is-active", card.dataset.key === key);
+    });
+
+    if (wordBox) {
+      wordBox.classList.toggle("is-active", wordBox.dataset.key === key);
+    }
+
     images.forEach((img) => {
-      img.classList.toggle("is-active", img.dataset.pillar === key);
+      const imgKey = img.dataset.pillar || img.dataset.key;
+      img.classList.toggle("is-active", imgKey === key);
     });
   };
 
@@ -138,8 +149,22 @@ document.querySelectorAll(".solution-layout").forEach((layout) => {
     item.addEventListener("mouseenter", () => activate(item.dataset.pillar));
   });
 
+  featureCards.forEach((card) => {
+    const key = card.dataset.key;
+    card.addEventListener("mouseenter", () => activate(key));
+    card.addEventListener("click", () => activate(key));
+  });
+
+  if (wordBox) {
+    const key = wordBox.dataset.key;
+    wordBox.addEventListener("mouseenter", () => activate(key));
+    wordBox.addEventListener("click", () => activate(key));
+  }
+
   if (items.length) {
     activate(items[0].dataset.pillar);
+  } else if (wordBox) {
+    activate(wordBox.dataset.key);
   }
 });
 
