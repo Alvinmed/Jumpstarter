@@ -211,43 +211,63 @@
         <div class="tab-panels">
           <div class="tab-panel is-active" id="panel-patient" role="tabpanel" aria-labelledby="tab-patient">
             <div class="solution-layout">
-              <div class="solution-copy" role="list">
-                <button class="solution-item is-active" type="button" data-pillar="bio">
-                  <span class="solution-item__label">Biosignal Coach · 24/7</span>
-                  <span class="solution-item__title">Personal vitality dashboard for older adults</span>
-                  <span class="solution-item__text">
-                    Passive Apple Watch and wearable data translate gait, tremor, HRV, and activity into intuitive streaks, recovery prompts, and gentle mobility nudges.
-                  </span>
-                </button>
-                <button class="solution-item" type="button" data-pillar="mind">
-                  <span class="solution-item__label">Cognitive Companion</span>
-                  <span class="solution-item__title">Voice-first mental wellness check-ins</span>
-                  <span class="solution-item__text">
-                    Multilingual conversations run adaptive recall games, PHQ-9 / GAD-7 screens, and tone tracking to surface changes long before crisis hits.
-                  </span>
-                </button>
-                <button class="solution-item" type="button" data-pillar="journey">
-                  <span class="solution-item__label">Longevity Journeys</span>
-                  <span class="solution-item__title">Hyper-personalised movement & nutrition plans</span>
-                  <span class="solution-item__text">
-                    AI co-designed with geriatricians calibrates strength, balance, and dietary goals—celebrating wins with badges sharable with family circles.
-                  </span>
-                </button>
-                <button class="solution-item" type="button" data-pillar="social">
-                  <span class="solution-item__label">Social Vitality</span>
-                  <span class="solution-item__title">Community discovery & isolation alerts</span>
-                  <span class="solution-item__text">
-                    Local hobby meetups, district health centre events, and NGO programmes are surfaced with accessibility filters; isolation triggers prompt outreach.
-                  </span>
-                </button>
+              <div class="word-box">
+                <span class="eyebrow">Featured Experience</span>
+                <h3 class="word-box__title">Personal Vitality Dashboard for Older Adults</h3>
+                <p class="word-box__text">
+                  A calming, high-contrast dashboard that translates HRV, tremor, gait and activity
+                  into clear daily streaks and recovery guidance. Designed with large tap targets,
+                  legible typography, and delightful micro-animations for confidence at any age.
+                </p>
               </div>
+              <div class="solution-visual solution-visual--light" aria-hidden="true">
+                <div class="solution-visual__inner">
+                  <div class="platform-base">
+                    <span>ResiliSense · Older Adult View</span>
                   </div>
+                  <svg viewBox="0 0 320 220" class="showcase-illustration">
+                    <defs>
+                      <linearGradient id="dbScreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(95,208,255,0.95)" />
+                        <stop offset="65%" stop-color="rgba(147,255,181,0.85)" />
+                        <stop offset="100%" stop-color="rgba(15,45,79,0.9)" />
+                      </linearGradient>
+                      <linearGradient id="dbCard" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="rgba(255,255,255,0.96)" />
+                        <stop offset="100%" stop-color="rgba(147,255,181,0.45)" />
+                      </linearGradient>
+                    </defs>
+                    <g transform="translate(20 24)">
+                      <rect x="0" y="0" width="280" height="168" rx="22" fill="rgba(7,28,55,0.25)" />
+                      <rect x="-8" y="-8" width="280" height="168" rx="22" fill="url(#dbScreen)"
+                            stroke="rgba(13,48,92,0.35)" stroke-width="2" />
+                      <rect x="8" y="10" width="76" height="14" rx="7" fill="rgba(15,45,79,0.38)" />
+                      <rect x="92" y="10" width="100" height="14" rx="7" fill="rgba(15,45,79,0.22)" />
+                      <g transform="translate(12 40)">
+                        <rect width="90" height="60" rx="14" fill="url(#dbCard)" stroke="rgba(21,36,59,0.08)" />
+                        <path d="M14 44 L26 26 L38 36 L48 22 L64 34" stroke="#1d86ff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="26" cy="26" r="3.5" fill="#1d86ff" />
+                        <circle cx="48" cy="22" r="3.5" fill="#f9c46b" />
+                      </g>
+                      <g transform="translate(116 48)">
+                        <rect width="116" height="68" rx="16" fill="rgba(255,255,255,0.9)" stroke="rgba(21,36,59,0.08)" />
+                        <path d="M16 50 C32 34, 44 60, 64 28" stroke="#5fd0ff" stroke-width="3" fill="none" stroke-linecap="round" />
+                        <path d="M16 30 L88 30" stroke="rgba(21,36,59,0.18)" stroke-width="2" />
+                        <rect x="16" y="12" width="56" height="10" rx="5" fill="rgba(29,134,255,0.32)" />
+                      </g>
+                      <g transform="translate(32 132)">
+                        <rect width="220" height="14" rx="7" fill="rgba(4,20,39,0.35)" />
+                        <rect x="20" y="-18" width="176" height="18" rx="9" fill="rgba(113,242,196,0.92)" />
+                        <text x="108" y="-4" fill="#0f2d4f" font-size="10" font-family="DM Sans" text-anchor="middle">HRV · Tremor · Recovery</text>
+                      </g>
+                    </g>
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
           <div class="tab-panel" id="panel-caregiver" role="tabpanel" aria-labelledby="tab-caregiver">
-            <div class="solution-layout">
+            <div class="solution-layout solution-layout--center">
               <div class="solution-copy" role="list">
                 <button class="solution-item is-active" type="button" data-pillar="command">
                   <span class="solution-item__label">Command Centre</span>
@@ -278,28 +298,33 @@
                   </span>
                 </button>
               </div>
-              <div class="solution-visual" aria-hidden="true">
-                <div class="solution-visual__inner">
-                  <div class="platform-base">
-                    <span>ResiliSense · Care Team View</span>
-                  </div>
-                  <div class="pillar-group">
-                    <div class="pillar pillar--command is-active" data-pillar="command" style="--pillar-height: 240px">
-                      <span class="pillar__label">Command</span>
-                    </div>
-                    <div class="pillar pillar--triage" data-pillar="triage" style="--pillar-height: 210px">
-                      <span class="pillar__label">Triage</span>
-                    </div>
-                    <div class="pillar pillar--care" data-pillar="care" style="--pillar-height: 230px">
-                      <span class="pillar__label">Care</span>
-                    </div>
-                    <div class="pillar pillar--insight" data-pillar="insight" style="--pillar-height: 200px">
-                      <span class="pillar__label">Insights</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
+          </div>
+          <div class="cards cards--three feature-cards">
+            <article class="feature-card">
+              <span class="feature-card__label">Cognitive Companion</span>
+              <h4 class="feature-card__title">Voice-first mental wellness check-ins</h4>
+              <p class="feature-card__text">
+                Multilingual conversations run adaptive recall games, PHQ-9 / GAD-7 screens,
+                and tone tracking to surface changes long before crisis hits.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-card__label">Longevity Journeys</span>
+              <h4 class="feature-card__title">Hyper-personalised movement & nutrition plans</h4>
+              <p class="feature-card__text">
+                AI co-designed with geriatricians calibrates strength, balance, and dietary goals—
+                celebrating wins with badges sharable with family circles.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-card__label">Social Vitality</span>
+              <h4 class="feature-card__title">Community discovery & isolation alerts</h4>
+              <p class="feature-card__text">
+                Local hobby meetups, district health centre events, and NGO programmes are surfaced
+                with accessibility filters; isolation triggers prompt outreach.
+              </p>
+            </article>
           </div>
         </div>
       </section>

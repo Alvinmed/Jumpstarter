@@ -24,7 +24,22 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     const target = document.getElementById(targetId);
     if (target) {
       event.preventDefault();
-      target.scrollIntoView({ behavior: "smooth" });
+
+      const navbar = document.querySelector(".navbar");
+      const headerHeight = navbar ? navbar.offsetHeight : 0;
+      const marginOffset = parseInt(
+        target.getAttribute("data-scroll-offset") || "0",
+        10
+      );
+      const offset = headerHeight + marginOffset + 24;
+      const targetPosition =
+        target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: Math.max(0, targetPosition),
+        behavior: "smooth",
+      });
+
       if (menu.classList.contains("is-open")) {
         menu.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
@@ -59,7 +74,7 @@ if (tabs.length) {
       tabs.forEach((btn) => {
         btn.classList.toggle("is-active", btn === tab);
         btn.setAttribute("aria-selected", btn === tab ? "true" : "false");
-     live   btn.setAttribute("tabindex", btn === tab ? "0" : "-1");
+        btn.setAttribute("tabindex", btn === tab ? "0" : "-1");
       });
 
       panels.forEach((p) => {
@@ -100,6 +115,7 @@ if (tabs.length) {
 document.querySelectorAll(".solution-layout").forEach((layout) => {
   const items = layout.querySelectorAll(".solution-item");
   const pillars = layout.querySelectorAll(".pillar");
+  const images = layout.querySelectorAll(".solution-image");
 
   const activate = (key) => {
     items.forEach((item) => {
@@ -110,6 +126,10 @@ document.querySelectorAll(".solution-layout").forEach((layout) => {
 
     pillars.forEach((pillar) => {
       pillar.classList.toggle("is-active", pillar.dataset.pillar === key);
+    });
+
+    images.forEach((img) => {
+      img.classList.toggle("is-active", img.dataset.pillar === key);
     });
   };
 
